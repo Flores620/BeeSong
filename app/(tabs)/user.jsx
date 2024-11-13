@@ -6,7 +6,7 @@ const User = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../assets/image/profile.png')} // replace with your image path
+        source={require('../../assets/image/profile.png')} 
         style={styles.backgroundImage}
       >
         <View style={styles.overlay}>

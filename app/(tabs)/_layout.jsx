@@ -35,8 +35,8 @@ const TabsLayout = () => {
                 />
               );
             },
-            tabBarActiveTintColor: 'yellow',   // Active icon color
-            tabBarInactiveTintColor: '#6A5D19',   // Inactive icon color
+            tabBarActiveTintColor: 'yellow',   
+            tabBarInactiveTintColor: '#6A5D19', 
             tabBarStyle: { backgroundColor: 'black' },
           }}
         />
@@ -56,8 +56,8 @@ const TabsLayout = () => {
                 />
               );
             },
-            tabBarActiveTintColor: 'yellow',   // Active icon color
-            tabBarInactiveTintColor: '#6A5D19',   // Inactive icon color
+            tabBarActiveTintColor: 'yellow', 
+            tabBarInactiveTintColor: '#6A5D19',
             tabBarStyle: { backgroundColor: 'black' },
           }}
         />
@@ -77,8 +77,8 @@ const TabsLayout = () => {
                 />
               );
             },
-            tabBarActiveTintColor: 'yellow',   // Active icon color
-            tabBarInactiveTintColor: '#6A5D19',   // Inactive icon color
+            tabBarActiveTintColor: 'yellow',  
+            tabBarInactiveTintColor: '#6A5D19',   
             tabBarStyle: { backgroundColor: 'black' },
           }}
         />
@@ -97,8 +97,8 @@ const TabsLayout = () => {
                 />
               );
             },
-            tabBarActiveTintColor: 'yellow',   // Active icon color
-            tabBarInactiveTintColor: '#6A5D19',   // Inactive icon color
+            tabBarActiveTintColor: 'yellow',   
+            tabBarInactiveTintColor: '#6A5D19', 
             tabBarStyle: { backgroundColor: 'black' },
           }}
         />        

@@ -1,39 +1,64 @@
-import { View, Text, ScrollView,Image } from 'react-native'
-import React from 'react'
-import { Redirect, router } from 'expo-router'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import {images} from '../../constants'
-import { StatusBar } from 'expo-status-bar'
-import CustomButton from '../../components/CustomButton'
+import { useState } from "react";
+import { View, Text, ScrollView, SafeAreaView, Image } from "react-native";
+import CustomButton from "../../components/CustomButton"; 
+import FormField from "../../components/FormField";
+import { Link, router, redirect } from "expo-router";
+import {images} from "../../constants"
 
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   return (
-    <SafeAreaView className = "bg-black h-full">
-      <ScrollView contentContainerStyle={{height: '100%'}}>
-        <View
-          className = "w-full justify-center items-center px-4 my-6">
+    <SafeAreaView className="flex-1 bg-black">
+      <ScrollView contentContainerStyle={{ padding: 16 }}>
+      <View
+          className = "">
             <Image
               source = {images.logo}
               className = "w-[300px] h-[150px] pt-10"
               resizeMode='contain'
               /> 
+        </View>
 
-          
-            <Text className="text-2xl text-yellow-500 mt-5 font-regular text-center">
-              Login to BeeMusic
-          </Text>
-      
+        <FormField
+          title="Enter email address"
+          value={email}
+          placeholder="Email"
+          handleChangeText={setEmail}
+          otherStyles="mt-5"
+        />
+        <FormField
+          title="Password"
+          value={password}
+          placeholder="Password"
+          handleChangeText={setPassword}
+          isPassword={true}
+          otherStyles="mt-5"
+        />
+
         <CustomButton
-            title="Log In"
-            handlePress={()=>router.push('/home')}
-            containerStyles="w-full mt-7"
-        >
-        </CustomButton>   
+          title="Log In"
+          handlePress={()=>router.push('/home')}
+          containerStyles="w-full mt-7"
+          isLoading={isSubmitting}
+        />
+
+        <View className="flex justify-center pt-5 flex-row gap-2">
+          <Text className="text-lg text-yellow-300 font-pregular">
+            Don't have an account?
+          </Text>
+          <Link
+            href="/signup"
+            className="text-lg font-u_bold" style={{ color: "#6A5D19" }}
+          >
+            Create an account
+          </Link>
         </View>
       </ScrollView>
-      <StatusBar backgroundColor='black' style='light'></StatusBar>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;
