@@ -2,10 +2,10 @@
 BeeSong Music App.
 
 # Features
-* Share Projects
-* Message other developers
-* Rate others work
-* Search other developers
+* Music Streaming
+* Data Caching
+* User-Friendly Search
+* Organized Menu
 
 # Course Overview
 * Basic React Native Components
